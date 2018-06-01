@@ -1,11 +1,13 @@
 using System;
+using System.Collections.Generic;
 
 namespace tictactoe
 {
   class Board
   {
     static string straightLine = new String('-', 11);
+    public static List<List<char>> Matrix = RowMatrix.Table;
     public static string CurrentStatus = 
-    $" {RowMatrix.Table[0][0]} | {RowMatrix.Table[0][1]} | {RowMatrix.Table[0][2]} {Environment.NewLine}{straightLine}{Environment.NewLine} {RowMatrix.Table[1][0]} | {RowMatrix.Table[1][1]} | {RowMatrix.Table[1][2]} {Environment.NewLine}{straightLine}{Environment.NewLine} {RowMatrix.Table[2][0]} | {RowMatrix.Table[2][1]} | {RowMatrix.Table[2][2]} {Environment.NewLine}";
+    $" {Matrix[0][0]} | {Matrix[0][1]} | {Matrix[0][2]} {Environment.NewLine}{straightLine}{Environment.NewLine} {Matrix[1][0]} | {Matrix[1][1]} | {Matrix[1][2]} {Environment.NewLine}{straightLine}{Environment.NewLine} {Matrix[2][0]} | {Matrix[2][1]} | {Matrix[2][2]} {Environment.NewLine}";
   }
 }
