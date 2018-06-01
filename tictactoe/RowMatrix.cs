@@ -5,9 +5,15 @@ namespace tictactoe
 {
   class RowMatrix
   {
-    public static char[] Row1 = new char[] { ' ', ' ', ' ' };
-    public static char[] Row2 = new char[] { ' ', ' ', ' ' };
-    public static char[] Row3 = new char[] { ' ', ' ', ' ' };
-    // public static List<char>[] Table = new List<char>[] { Row1, Row2, Row3 };
+    public static List<List<char>> Main()
+    {
+      List<List<char>> Table = new List<List<char>>();
+      for (int i = 0; i < 3; i++)
+      {
+        List<char> Row = new List<char>(new char[] { ' ', ' ', ' ' });
+        Table.Add(Row);
+      }
+      return Table;
+    }
   }
 }
