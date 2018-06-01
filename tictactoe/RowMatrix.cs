@@ -3,11 +3,17 @@ using System.Collections.Generic;
 
 namespace tictactoe
 {
-  class RowMatrix
+  static class RowMatrix
   {
-    public static char[] Row1 = new char[] { ' ', ' ', ' ' };
-    public static char[] Row2 = new char[] { ' ', ' ', ' ' };
-    public static char[] Row3 = new char[] { ' ', ' ', ' ' };
-    // public static List<char>[] Table = new List<char>[] { Row1, Row2, Row3 };
+    public static List<List<char>> Table;
+    static RowMatrix()
+    {
+      Table = new List<List<char>>();
+      for (int i = 0; i < 3; i++)
+      {
+        List<char> Row = new List<char>(new char[] { ' ', ' ', ' ' });
+        Table.Add(Row);
+      }
+    }
   }
 }
