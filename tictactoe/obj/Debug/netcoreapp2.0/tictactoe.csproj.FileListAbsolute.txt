@@ -1,0 +1,11 @@
+/Users/iiimosley/Workspace/c#NET/tictactoe/bin/Debug/netcoreapp2.0/tictactoe.deps.json
+/Users/iiimosley/Workspace/c#NET/tictactoe/bin/Debug/netcoreapp2.0/tictactoe.runtimeconfig.json
+/Users/iiimosley/Workspace/c#NET/tictactoe/bin/Debug/netcoreapp2.0/tictactoe.runtimeconfig.dev.json
+/Users/iiimosley/Workspace/c#NET/tictactoe/bin/Debug/netcoreapp2.0/tictactoe.dll
+/Users/iiimosley/Workspace/c#NET/tictactoe/bin/Debug/netcoreapp2.0/tictactoe.pdb
+/Users/iiimosley/Workspace/c#NET/tictactoe/obj/Debug/netcoreapp2.0/tictactoe.csprojAssemblyReference.cache
+/Users/iiimosley/Workspace/c#NET/tictactoe/obj/Debug/netcoreapp2.0/tictactoe.csproj.CoreCompileInputs.cache
+/Users/iiimosley/Workspace/c#NET/tictactoe/obj/Debug/netcoreapp2.0/tictactoe.AssemblyInfoInputs.cache
+/Users/iiimosley/Workspace/c#NET/tictactoe/obj/Debug/netcoreapp2.0/tictactoe.AssemblyInfo.cs
+/Users/iiimosley/Workspace/c#NET/tictactoe/obj/Debug/netcoreapp2.0/tictactoe.dll
+/Users/iiimosley/Workspace/c#NET/tictactoe/obj/Debug/netcoreapp2.0/tictactoe.pdb
