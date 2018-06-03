@@ -12,10 +12,11 @@ namespace tictactoe
             Console.Write("Mark a spot (1-9): ");
             return int.Parse(Console.ReadLine());
         }
-        static void Main()
+        public static void Main()
         {
             try{
                 int input = printTable(Board.CurrentStatus);
+                Console.WriteLine(input);
                 do 
                 {
                     switch (input)
@@ -84,7 +85,7 @@ namespace tictactoe
                             break;
                         }
                     }
-                } while(input < 10 && input < 0);
+                } while(input < 10 && input > 0);
             }
             catch(FormatException)
             {
