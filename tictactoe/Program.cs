@@ -2,56 +2,73 @@
 
 namespace tictactoe
 {
-    class Program
+  class Program
+  {
+    public static char CurrentPlayer = 'X';
+    public static void markSpot(int x, int y)
     {
-        public static char CurrentPlayer = 'X';
-        public static void markSpot(int x, int y)
-        {
-            if (RowMatrix.Table[x][y] != ' ')
-            {
-                Console.WriteLine("SPOT HAS BEEN CLAIMED");    
-            }
-            else
-            {
-                RowMatrix.Table[x][y] = CurrentPlayer;
-                CurrentPlayer = CurrentPlayer == 'X' ? 'O' : CurrentPlayer = 'X';
-            }
-        }
-        public static void Main()
-        {
-            try{
-                int input;
-                do {
-                Console.WriteLine(Board.CurrentStatus(RowMatrix.Table));
-                Console.WriteLine($"Current Player: {CurrentPlayer}");
-                Console.Write("Mark a spot (1-9): ");
-                input = int.Parse(Console.ReadLine());
-                if(input == 1)
-                    markSpot(0, 0);
-                else if(input == 2)
-                    markSpot(0, 1);
-                else if(input == 3)
-                    markSpot(0, 2);
-                else if(input == 4)
-                    markSpot(1, 0);
-                else if(input == 5)
-                    markSpot(1, 1);
-                else if(input == 6)
-                    markSpot(1, 2);
-                else if(input == 7)
-                    markSpot(2, 0);
-                else if(input == 8)
-                    markSpot(2, 1);
-                else if(input == 9)
-                    markSpot(2, 2);
-                else
-                    Console.WriteLine($"{input} is not a valid input");
-                }while(input < 10);
-            }
-            catch(FormatException)
-            {
-                throw new System.FormatException();
-            }
-        }
+      if (RowMatrix.Table[x][y] != ' ')
+      {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("SPOT HAS BEEN CLAIMED");
+        Console.ResetColor();
+      }
+      else
+      {
+        RowMatrix.Table[x][y] = CurrentPlayer;
+        CurrentPlayer = CurrentPlayer == 'X' ? 'O' : CurrentPlayer = 'X';
+      }
     }
+    public static void Main()
+    {
+      try
+      {
+        int input;
+        do
+        {
+          Console.WriteLine(Board.CurrentStatus(RowMatrix.Table));
+          Console.WriteLine($"Current Player: {CurrentPlayer}");
+          Console.Write("Mark a spot (1-9): ");
+          input = int.Parse(Console.ReadLine());
+          switch (input)
+          {
+            case 1:
+              markSpot(0, 0);
+              break;
+            case 2:
+              markSpot(0, 1);
+              break;
+            case 3:
+              markSpot(0, 2);
+              break;
+            case 4:
+              markSpot(1, 0);
+              break;
+            case 5:
+              markSpot(1, 1);
+              break;
+            case 6:
+              markSpot(1, 2);
+              break;
+            case 7:
+              markSpot(2, 0);
+              break;
+            case 8:
+              markSpot(2, 1);
+              break;
+            case 9:
+              markSpot(2, 2);
+              break;
+            default:
+              Console.WriteLine($"{input} is not a valid input");
+              break;
+          }
+        } while (input < 10);
+      }
+      catch (FormatException)
+      {
+        throw new System.FormatException();
+      }
+    }
+  }
 }
