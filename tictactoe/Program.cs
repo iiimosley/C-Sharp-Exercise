@@ -18,6 +18,7 @@ namespace tictactoe
         Matrix.Table[x][y] = CurrentPlayer;
         if (Determine.Winner(CurrentPlayer))
         {
+          Console.WriteLine(Board.CurrentStatus(Matrix.Table));
           Console.BackgroundColor = ConsoleColor.Blue;
           Console.ForegroundColor = ConsoleColor.White;
           Console.WriteLine($"*** {CurrentPlayer}  WINS!!! ***");
