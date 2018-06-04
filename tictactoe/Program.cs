@@ -7,8 +7,15 @@ namespace tictactoe
         public static char CurrentPlayer = 'X';
         public static void markSpot(int x, int y)
         {
-            RowMatrix.Table[x][y] = CurrentPlayer;
-            CurrentPlayer = CurrentPlayer == 'X' ? 'O' : CurrentPlayer = 'X';
+            if (RowMatrix.Table[x][y] != ' ')
+            {
+                Console.WriteLine("SPOT HAS BEEN CLAIMED");    
+            }
+            else
+            {
+                RowMatrix.Table[x][y] = CurrentPlayer;
+                CurrentPlayer = CurrentPlayer == 'X' ? 'O' : CurrentPlayer = 'X';
+            }
         }
         public static void Main()
         {
