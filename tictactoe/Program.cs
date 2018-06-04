@@ -8,27 +8,13 @@ namespace tictactoe
     public static void markSpot(int x, int y)
     {
       if (Matrix.Table[x][y] != ' ')
-      {
-        Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine("SPOT HAS BEEN CLAIMED");
-        Console.ResetColor();
-      }
+        Prompt.SpotTaken();
       else
-      {
         Matrix.Table[x][y] = CurrentPlayer;
         if (Determine.Winner(CurrentPlayer))
-        {
-          Console.WriteLine(Board.CurrentStatus(Matrix.Table));
-          Console.BackgroundColor = ConsoleColor.Blue;
-          Console.ForegroundColor = ConsoleColor.White;
-          Console.WriteLine($"*** {CurrentPlayer}  WINS!!! ***");
-          Console.ResetColor();
-          Environment.Exit(0);
-        }
-        else {
+          Prompt.Winner();
+        else
           CurrentPlayer = Determine.Player(CurrentPlayer);
-        }
-      }
     }
     public static void Main()
     {
