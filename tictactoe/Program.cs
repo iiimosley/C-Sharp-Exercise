@@ -4,7 +4,7 @@ namespace tictactoe
 {
   class Program
   {
-    public static char CurrentPlayer = 'X';
+    public static char CurrentPlayer;
     public static void markSpot(int x, int y)
     {
       if (RowMatrix.Table[x][y] != ' ')
@@ -16,7 +16,8 @@ namespace tictactoe
       else
       {
         RowMatrix.Table[x][y] = CurrentPlayer;
-        CurrentPlayer = CurrentPlayer == 'X' ? 'O' : CurrentPlayer = 'X';
+        CurrentPlayer = CurrentPlayer == 'X' ? 'O' : 'X';
+        Determine.RunRows();
       }
     }
     public static void Main()
@@ -24,6 +25,7 @@ namespace tictactoe
       try
       {
         int input;
+        CurrentPlayer = 'X';
         do
         {
           Console.WriteLine(Board.CurrentStatus(RowMatrix.Table));
