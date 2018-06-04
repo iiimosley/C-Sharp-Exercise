@@ -6,6 +6,9 @@ namespace tictactoe
 {
   class Determine
   {
+
+    public static char Player(char player) => player == 'X' ? 'O' : 'X';
+
     static char[][] WinningRows (char[][] Table)
     {
       return new char[][] {

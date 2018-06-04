@@ -26,7 +26,7 @@ namespace tictactoe
           Environment.Exit(0);
         }
         else {
-          CurrentPlayer = CurrentPlayer == 'X' ? 'O' : 'X';
+          CurrentPlayer = Determine.Player(CurrentPlayer);
         }
       }
     }
@@ -38,9 +38,7 @@ namespace tictactoe
         CurrentPlayer = 'X';
         do
         {
-          Console.WriteLine(Board.CurrentStatus(Matrix.Table));
-          Console.WriteLine($"Current Player: {CurrentPlayer}");
-          Console.Write("Mark a spot (1-9): ");
+          Prompt.ContinuePlaying();
           input = int.Parse(Console.ReadLine());
           switch (input)
           {
