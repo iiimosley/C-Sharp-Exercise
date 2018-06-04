@@ -14,5 +14,14 @@ namespace tictactoe
         Table[i] = new char[] { ' ', ' ', ' ' };
       }
     }
+
+    public static void MarkSpot(int x, int y)
+    {
+      Table[x][y] = Program.CurrentPlayer;
+      if (Determine.Winner(Program.CurrentPlayer))
+        Prompt.Winner();
+      else
+        Program.CurrentPlayer = Determine.Player(Program.CurrentPlayer);
+    }
   }
 }

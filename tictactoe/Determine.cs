@@ -6,9 +6,6 @@ namespace tictactoe
 {
   class Determine
   {
-
-    public static char Player(char player) => player == 'X' ? 'O' : 'X';
-
     static char[][] WinningRows (char[][] Table)
     {
       return new char[][] {
@@ -23,7 +20,7 @@ namespace tictactoe
       };
     }
 
+    public static char Player(char player) => player == 'X' ? 'O' : 'X';
     public static bool Winner(char player) => WinningRows(Matrix.Table).Any(row => row.All(val => val == player));
-
   }
 }

@@ -5,16 +5,12 @@ namespace tictactoe
   class Program
   {
     public static char CurrentPlayer;
-    public static void markSpot(int x, int y)
+    public static void MakeMove(int x, int y)
     {
       if (Matrix.Table[x][y] != ' ')
         Prompt.SpotTaken();
       else
-        Matrix.Table[x][y] = CurrentPlayer;
-        if (Determine.Winner(CurrentPlayer))
-          Prompt.Winner();
-        else
-          CurrentPlayer = Determine.Player(CurrentPlayer);
+        Matrix.MarkSpot(x,y);
     }
     public static void Main()
     {
@@ -29,31 +25,31 @@ namespace tictactoe
           switch (input)
           {
             case 1:
-              markSpot(0, 0);
+              MakeMove(0, 0);
               break;
             case 2:
-              markSpot(0, 1);
+              MakeMove(0, 1);
               break;
             case 3:
-              markSpot(0, 2);
+              MakeMove(0, 2);
               break;
             case 4:
-              markSpot(1, 0);
+              MakeMove(1, 0);
               break;
             case 5:
-              markSpot(1, 1);
+              MakeMove(1, 1);
               break;
             case 6:
-              markSpot(1, 2);
+              MakeMove(1, 2);
               break;
             case 7:
-              markSpot(2, 0);
+              MakeMove(2, 0);
               break;
             case 8:
-              markSpot(2, 1);
+              MakeMove(2, 1);
               break;
             case 9:
-              markSpot(2, 2);
+              MakeMove(2, 2);
               break;
             default:
               Console.WriteLine($"{input} is not a valid input");
