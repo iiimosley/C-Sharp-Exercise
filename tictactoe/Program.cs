@@ -7,7 +7,7 @@ namespace tictactoe
     public static char CurrentPlayer;
     public static void markSpot(int x, int y)
     {
-      if (RowMatrix.Table[x][y] != ' ')
+      if (Matrix.Table[x][y] != ' ')
       {
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("SPOT HAS BEEN CLAIMED");
@@ -15,13 +15,17 @@ namespace tictactoe
       }
       else
       {
-        RowMatrix.Table[x][y] = CurrentPlayer;
+        Matrix.Table[x][y] = CurrentPlayer;
         if (Determine.Winner(CurrentPlayer))
         {
-          Console.WriteLine($"\n {CurrentPlayer}  WINS!!!");
+          Console.BackgroundColor = ConsoleColor.Blue;
+          Console.ForegroundColor = ConsoleColor.White;
+          Console.WriteLine($"*** {CurrentPlayer}  WINS!!! ***");
+          Console.ResetColor();
+          Environment.Exit(0);
         }
         else {
-        CurrentPlayer = CurrentPlayer == 'X' ? 'O' : 'X';
+          CurrentPlayer = CurrentPlayer == 'X' ? 'O' : 'X';
         }
       }
     }
@@ -33,7 +37,7 @@ namespace tictactoe
         CurrentPlayer = 'X';
         do
         {
-          Console.WriteLine(Board.CurrentStatus(RowMatrix.Table));
+          Console.WriteLine(Board.CurrentStatus(Matrix.Table));
           Console.WriteLine($"Current Player: {CurrentPlayer}");
           Console.Write("Mark a spot (1-9): ");
           input = int.Parse(Console.ReadLine());
