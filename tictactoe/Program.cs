@@ -8,6 +8,7 @@ namespace tictactoe
         public static void markSpot(int x, int y)
         {
             RowMatrix.Table[x][y] = CurrentPlayer;
+            CurrentPlayer = CurrentPlayer == 'X' ? 'O' : CurrentPlayer = 'X';
         }
         public static void Main()
         {
