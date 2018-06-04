@@ -1,11 +1,12 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace tictactoe
 {
   class Determine
   {
-    public static char[][] WinningRows = new char[8][]
+    static char[][] WinningRows = new char[8][]
     {
       RowMatrix.Table[0],
       RowMatrix.Table[1],
@@ -17,13 +18,7 @@ namespace tictactoe
       new char[] { RowMatrix.Table[0][2], RowMatrix.Table[1][1], RowMatrix.Table[2][0] },
     };
 
-  public static void RunRows()
-  {
-    for(int i=0; i<WinningRows.Length; i++)
-    {
-        Console.WriteLine(WinningRows[i]);
-    }
-  }
-  
+    public static bool Winner(char player) => WinningRows.Any(row => row.All(val => val == player));
+
   }
 }

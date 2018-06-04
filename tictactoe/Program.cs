@@ -16,8 +16,13 @@ namespace tictactoe
       else
       {
         RowMatrix.Table[x][y] = CurrentPlayer;
+        if (Determine.Winner(CurrentPlayer))
+        {
+          Console.WriteLine($"\n {CurrentPlayer}  WINS!!!");
+        }
+        else {
         CurrentPlayer = CurrentPlayer == 'X' ? 'O' : 'X';
-        Determine.RunRows();
+        }
       }
     }
     public static void Main()
