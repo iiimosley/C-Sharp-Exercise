@@ -10,6 +10,16 @@ namespace AnatomyAPI.Controllers
     {
         public ActionResult Detail()
         {
+            ViewBag.bodySection = "heart";
+            ViewBag.description = "<p>Keeps the blood flowing and the body moving</p>";
+            ViewBag.mainSections = new string[]
+            {
+                "left ventricle",
+                "right ventricle",
+                "left atrium",
+                "right atrium"
+            };
+            
             return View();
         }
     }
