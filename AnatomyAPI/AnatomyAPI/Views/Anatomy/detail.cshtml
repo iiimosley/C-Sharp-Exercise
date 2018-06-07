@@ -1,0 +1,39 @@
+﻿@{
+    Layout = null;
+
+    var bodySection = "heart";
+    var description = "<p>Keeps the blood flowing and the body moving</p>";
+    var mainSections = new string[]
+    {
+        "left ventricle",
+        "right ventricle",
+        "left atrium",
+        "right atrium"
+    };
+
+
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title></title>
+    </head>
+    <body>
+        <div>
+            <h1>@bodySection</h1>
+            <div>@Html.Raw(description)</div>
+            <h3>Sections</h3>
+            <div>
+                <ul>
+                    @foreach (var sect in mainSections)
+                    {
+                        <li>@sect</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

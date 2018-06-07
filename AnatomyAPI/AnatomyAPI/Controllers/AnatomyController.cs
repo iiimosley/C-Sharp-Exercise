@@ -8,14 +8,9 @@ namespace AnatomyAPI.Controllers
 {
     public class AnatomyController : Controller
     {
-
-        public string Detail()
+        public ActionResult Detail()
         {
-            return "This is the anatomy page";
+            return View();
         }
-        //public ActionResult Index()
-        //{
-        //    return View ();
-        //}
     }
-}
+} 
