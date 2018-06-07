@@ -3,7 +3,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Http;
 
-namespace RestaurantAPI
+namespace AnatomyAPI
 {
     public class Global : HttpApplication
     {

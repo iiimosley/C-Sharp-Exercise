@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace RestaurantAPI
+namespace AnatomyAPI
 {
     public static class WebApiConfig
     {
