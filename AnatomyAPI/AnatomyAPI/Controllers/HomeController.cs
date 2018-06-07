@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
 
-namespace RestaurantAPI.Controllers
+namespace AnatomyAPI.Controllers
 {
     public class HomeController : Controller
     {
