@@ -89,7 +89,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Models\Member.cs" />
-    <Compile Include="Data\AnatomyRepository.cs" />
+    <Compile Include="Data\MemberRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
@@ -107,9 +107,6 @@
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Images\bone-50.jpg" />
-    <Content Include="Images\the-amazing-spider-man-657.jpg" />
-    <Content Include="Images\the-amazing-spider-man-700.jpg" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

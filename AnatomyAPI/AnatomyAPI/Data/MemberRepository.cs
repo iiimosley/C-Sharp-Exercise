@@ -7,12 +7,13 @@ using AnatomyAPI.Models;
 
 namespace AnatomyAPI.Data
 {
-    public class AnatomyRepository
+    public class MemberRepository
     {
-        public Member GetMember()
+        private static Member[] _members = new Member[]
         {
-            var member = new Member()
+            new Member()
             {
+                Id = 1,
                 Name = "Heart",
                 Description = "<p>Keeps the blood flowing and the body moving</p>",
                 Sections = new string[]
@@ -22,9 +23,20 @@ namespace AnatomyAPI.Data
                     "left atrium",
                     "right atrium"
                 }
-            };
+            }
+        };
 
-            return member;
+        public Member GetMember(int id)
+        {
+            Member memberReturn = null;
+
+            foreach (var member in _members)
+            {
+                if (member.Id == id)
+                    memberReturn = member;
+            }
+
+            return memberReturn;
         }
     }
 } 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
+using AnatomyAPI.Data;
 using AnatomyAPI.Models;
 
 namespace AnatomyAPI.Controllers
@@ -11,21 +12,19 @@ namespace AnatomyAPI.Controllers
     public class MemberController : Controller
     {
 
-        public ActionResult Detail()
-        {
+        private MemberRepository _memberRepository = null;
 
-            var member = new Member()
-            {
-                Name = "Heart",
-                Description = "<p>Keeps the blood flowing and the body moving</p>",
-                Sections = new string[]
-                {
-                    "left ventricle",
-                    "right ventricle",
-                    "left atrium",
-                    "right atrium"
-                }
-            };
+        public MemberController()
+        {
+            _memberRepository = new MemberRepository();
+        }
+
+        public ActionResult Detail(int? id)
+        {
+            if (id == null)
+                return HttpNotFound();
+            
+            var member = _memberRepository.GetMember((int)id);
 
             return View(member);
         }
