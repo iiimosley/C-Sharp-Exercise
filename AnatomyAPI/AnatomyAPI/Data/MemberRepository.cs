@@ -18,13 +18,51 @@ namespace AnatomyAPI.Data
                 Description = "<p>Keeps the blood flowing and the body moving</p>",
                 Sections = new string[]
                 {
-                    "left ventricle",
-                    "right ventricle",
-                    "left atrium",
-                    "right atrium"
+                    "Left Ventricle",
+                    "Right Ventricle",
+                    "Left Atrium",
+                    "Right Atrium"
+                }
+            },
+            new Member()
+            {
+                Id = 2,
+                Name = "Brain",
+                Description = "<p>Engine for the body</p>",
+                Sections = new string[]
+                {
+                    "Frontal Lobe",
+                    "Temporal Lobe",
+                    "Occipital Lobe",
+                    "Porietal Lobe",
+                    "Frontal Cortex",
+                    "Cerebullum",
+                    "Medulla Oblongata",
+                    "Thalamus",
+                    "Brain Stem",
+                    "Pons"
+                }
+            },
+            new Member()
+            {
+                Id = 3,
+                Name = "Spinal Cord",
+                Description = "<p>Foundation of the skeleton</p>",
+                Sections = new string[]
+                {
+                    "Cervical",
+                    "Thoracic",
+                    "Lumbar",
+                    "Atlas",
+                    "Axis"
                 }
             }
         };
+
+        public Member[] GetMembers()
+        {
+            return _members;
+        }
 
         public Member GetMember(int id)
         {
