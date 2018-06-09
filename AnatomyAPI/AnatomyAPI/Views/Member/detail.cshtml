@@ -1,0 +1,18 @@
+﻿@model AnatomyAPI.Models.Member
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = Model.Name;
+}
+
+<h1>@Model.Name</h1>
+<div>@Html.Raw(Model.Description)</div>
+<h3>Sections</h3>
+<div>
+    <ul>
+        @foreach (var sect in Model.Sections)
+        {
+            <li>@sect</li>
+        }
+    </ul>
+</div>
