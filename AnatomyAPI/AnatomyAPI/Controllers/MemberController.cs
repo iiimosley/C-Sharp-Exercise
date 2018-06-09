@@ -22,6 +22,7 @@ namespace AnatomyAPI.Controllers
         public ActionResult Index()
         {
             var members = _memberRepository.GetMembers();
+
             return View(members);
         }
 
