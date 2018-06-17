@@ -1,0 +1,16 @@
+﻿@model AnatomyAPI.Models.Member[]
+
+@{
+    ViewBag.Title = "Member Index";
+}
+
+<h2>Member List</h2>
+
+<div class="row">
+    @foreach (var member in Model)
+    {
+        <div class="col-md-3">
+            <h4>@Html.ActionLink(member.Name, "Detail", new { id = member.Id})</h4>
+        </div>
+    }
+</div>
